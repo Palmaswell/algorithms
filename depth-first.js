@@ -20,7 +20,13 @@ b.left = d;
 b.right = e;
 c.right = f;
 
-function deepFirstSearch(node) {
+/**
+ * @name depthFirstSearch
+ * @description Depth-first search is an algorithm for traversing or searching a
+ * binary tree moving as deeply as possible through one branch until hitting a
+ * leave and moving right to left.
+ */
+function depthFirstSearch(node) {
   const stack = [node];
 
   while (stack.length > 0) {
@@ -37,4 +43,15 @@ function deepFirstSearch(node) {
   }
 }
 
-deepFirstSearch(a);
+// it should return a b d e c f
+// depthFirstSearch(a);
+
+function depthFirstSearchR(node) {
+  if (!node) return;
+  console.log(node.value);
+  depthFirstSearchR(node.left);
+  depthFirstSearchR(node.right);
+}
+
+// it should return a b d e c f
+depthFirstSearchR(a);

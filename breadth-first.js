@@ -20,10 +20,14 @@ b.left = d;
 b.right = e;
 c.right = f;
 
-// Breath-first Search
-// The breath-first search algorithm starts at the root level of the tree and
-// traversed all the nodes from a level left to right.
-function breathFirstSearch(root) {
+/**
+ * @name Breadth-first Search
+ * @description The breadth-first search algorithm starts at the root level of
+ * the binary tree and traverse all the nodes from one level left to right
+ * before moving to the next level.
+ **/
+
+function breadthFirstSearch(root) {
   const queue = [root];
 
   while (queue.length > 0) {
@@ -41,4 +45,4 @@ function breathFirstSearch(root) {
 }
 
 // should return a b c d e f
-breathFirstSearch(a);
+breadthFirstSearch(a);
